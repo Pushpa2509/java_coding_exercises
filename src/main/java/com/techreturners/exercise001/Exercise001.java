@@ -8,16 +8,18 @@ public class Exercise001 {
     }
 
     public String generateInitials(String firstName, String lastName) {
-        return Character.toUpperCase(firstName.charAt(0)+"."+ lastName.charAt(0));
+        return firstName.charAt(0)+ "." +lastName.charAt(0);
     }
 
     public double addVat(double originalPrice, double vatRate) {
-        return 0.0;
+        double x= (vatRate*originalPrice)/100;
+        double total = originalPrice+x;
+        return total;
     }
 
     public String reverse(String sentence) {
-
-        return "";
+        String reversestr = new StringBuilder(sentence).reverse().toString();
+        return reversestr;
     }
 
     public int countLinuxUsers(List<User> users) {
