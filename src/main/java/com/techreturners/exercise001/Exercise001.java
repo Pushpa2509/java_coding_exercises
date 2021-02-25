@@ -14,7 +14,7 @@ public class Exercise001 {
     public double addVat(double originalPrice, double vatRate) {
         double x= (vatRate*originalPrice)/100;
         double total = originalPrice+x;
-        return total;
+        return Double.parseDouble(String.format("%.2f", total));
     }
 
     public String reverse(String sentence) {
@@ -23,6 +23,17 @@ public class Exercise001 {
     }
 
     public int countLinuxUsers(List<User> users) {
-        return 0;
-    }
+        int count = 0;
+
+		for (int i = 0; i < users.size(); i++) {
+			String operatingSystemName = users.get(i).getType();
+			if (operatingSystemName.equalsIgnoreCase("Linux")) {
+				count++;
+			}
+		}
+
+		return count;
+	}
+    
 }
+
